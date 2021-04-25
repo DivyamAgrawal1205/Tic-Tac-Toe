@@ -91,6 +91,10 @@ int makemove(char a[][3],int i,int d2,vector<int> b,char p1,char p2)// A functio
      {
        a[(z-1)/3][(z-1)%3] = p2;
        if(win(a,p2)){pos = z; a[(z-1)/3][(z-1)%3]='-';foundmove = true;return pos;}
+       else{a[(z-1)/3][(z-1)%3]='-';}
+     }
+     for( int z : s)
+     {
        a[(z-1)/3][(z-1)%3]= p1;
        if(win(a,p1)){pos = z; a[(z-1)/3][(z-1)%3]='-';foundmove =true;return pos;}
        else{a[(z-1)/3][(z-1)%3]='-';}
